@@ -1,0 +1,1626 @@
+<?php 
+// include autoloader
+require_once 'autoload.inc.php';
+ 
+// reference the Dompdf namespace
+use Dompdf\Dompdf;
+
+// instantiate and use the dompdf class
+$dompdf = new Dompdf();
+
+  $position = $_POST['position']; // required
+  if ($position = " " || empty($position)) {
+  $position = "Not Fill"; // required
+    echo "string";
+  }
+
+
+$date = $_POST['date']; // required
+if ($date = " " || empty($date)) {
+  $date = "Not Fill"; // required
+    echo "string";
+  }
+
+   $specify1 = $_POST['specify1']; // required
+   if ($specify1 = " " || empty($specify1)) {
+  $specify1 = "Not Fill"; // required
+    echo "string";
+  }
+
+$specify2 = $_POST['specify2']; // required
+if ($specify2 = " " || empty($specify2)) {
+  $specify2 = "Not Fill"; // required
+    echo "string";
+  }
+
+  $specify3 = $_POST['specify3']; // required
+  if ($specify3 = " " || empty($specify3)) {
+  $specify3 = "Not Fill"; // required
+    echo "string";
+  }
+
+$specify4 = $_POST['specify4']; // required
+if ($specify4 = " " || empty($specify4)) {
+  $specify4 = "Not Fill"; // required
+    echo "string";
+  }
+
+   $full_name = $_POST['full_name']; // required
+   if ($full_name = " " || empty($full_name)) {
+  $full_name = "Not Fill"; // required
+    echo "string";
+  }
+
+$nrc = $_POST['nrc']; // required
+if ($nrc = " " || empty($nrc)) {
+  $nrc = "Not Fill"; // required
+    echo "string";
+  }
+
+  $passport = $_POST['passport']; // required
+  if ($passport = " " || empty($passport)) {
+  $passport = "Not Fill"; // required
+    echo "string";
+  }
+
+$present_add = $_POST['present_add']; // required
+if ($present_add = " " || empty($present_add)) {
+  $present_add = "Not Fill"; // required
+    echo "string";
+  }
+
+   $tel = $_POST['tel']; // required
+   if ($tel = " " || empty($tel)) {
+  $tel = "Not Fill"; // required
+    echo "string";
+  }
+
+$postal = $_POST['postal']; // required
+  if ($postal = " " || empty($postal)) {
+  $postal = "Not Fill"; // required
+    echo "string";
+  }
+  $email = $_POST['email']; // required
+    if ($email = " " || empty($email)) {
+  $email = "Not Fill"; // required
+    echo "string";
+  }
+$birth = $_POST['birth']; // required
+  if ($birth = " " || empty($birth)) {
+  $birth = "Not Fill"; // required
+    echo "string";
+  }
+
+$pBirth = $_POST['pBirth']; // required
+  if ($pBirth = " " || empty($pBirth)) {
+  $pBirth = "Not Fill"; // required
+    echo "string";
+  }
+$age = $_POST['age']; // required
+  if ($age = " " || empty($age)) {
+  $age = "Not Fill"; // required
+    echo "string";
+  }
+   $nationality = $_POST['nationality']; // required
+     if ($nationality = " " || empty($nationality)) {
+  $nationality = "Not Fill"; // required
+    echo "string";
+  }
+$religion = $_POST['religion']; // required
+  if ($religion = " " || empty($religion)) {
+  $religion = "Not Fill"; // required
+    echo "string";
+  }
+  $race = $_POST['race']; 
+    if ($race = " " || empty($race)) {
+  $race = "Not Fill"; // required
+    echo "string";
+  }
+  $spe_class = $_POST['spe_class'];
+      if ($spe_class = " " || empty($spe_class)) {
+  $spe_class = "Not Fill"; // required
+    echo "string";
+  }
+$father = $_POST['father']; 
+  if ($father = " " || empty($father)) {
+  $father = "Not Fill"; // required
+    echo "string";
+  }
+   $relationship = $_POST['relationship']; 
+     if ($relationship = " " || empty($relationship)) {
+  $relationship = "Not Fill"; // required
+    echo "string";
+  }
+$age = $_POST['age']; 
+  if ($age = " " || empty($age)) {
+  $age = "Not Fill"; // required
+    echo "string";
+  }
+  $employer = $_POST['employer']; 
+    if ($employer = " " || empty($employer)) {
+  $employer = "Not Fill"; // required
+    echo "string";
+  }
+$occupation = $_POST['occupation']; 
+  if ($occupation = " " || empty($occupation)) {
+  $occupation = "Not Fill"; // required
+    echo "string";
+  }
+$mother = $_POST['mother']; 
+  if ($mother = " " || empty($mother)) {
+  $mother = "Not Fill"; // required
+    echo "string";
+  }
+   $relationship2 = $_POST['relationship2']; 
+     if ($relationship2 = " " || empty($relationship2)) {
+  $relationship2 = "Not Fill"; // required
+    echo "string";
+  }
+$age2 = $_POST['age2']; 
+  if ($age2 = " " || empty($age2)) {
+  $age2 = "Not Fill"; // required
+    echo "string";
+  }
+  $employer2 = $_POST['employer2']; 
+    if ($employer2 = " " || empty($employer2)) {
+  $employer2 = "Not Fill"; // required
+    echo "string";
+  }
+$occupation2 = $_POST['occupation2']; 
+  if ($occupation2 = " " || empty($occupation2)) {
+  $occupation2 = "Not Fill"; // required
+    echo "string";
+  }
+$n3 = $_POST['3']; 
+  if ($n3 = " " || empty($n3)) {
+  $n3 = "Not Fill"; // required
+    echo "string";
+  }
+   $relationship3 = $_POST['relationship3']; 
+     if ($relationship3 = " " || empty($relationship3)) {
+  $relationship3 = "Not Fill"; // required
+    echo "string";
+  }
+$age3 = $_POST['age3']; 
+  if ($age3 = " " || empty($age3)) {
+  $age3 = "Not Fill"; // required
+    echo "string";
+  }
+  $employer3 = $_POST['employer3']; 
+    if ($employer3 = " " || empty($employer3)) {
+  $employer3 = "Not Fill"; // required
+    echo "string";
+  }
+$occupation3 = $_POST['occupation3']; 
+  if ($occupation3 = " " || empty($occupation3)) {
+  $occupation3 = "Not Fill"; // required
+    echo "string";
+  }
+$n4 = $_POST['4']; 
+  if ($n4 = " " || empty($n4)) {
+  $n4 = "Not Fill"; // required
+    echo "string";
+  }
+   $relationship4 = $_POST['relationship4']; 
+     if ($relationship4 = " " || empty($relationship4)) {
+  $relationship4 = "Not Fill"; // required
+    echo "string";
+  }
+$age4 = $_POST['age4']; 
+  if ($age4 = " " || empty($age4)) {
+  $age4 = "Not Fill"; // required
+    echo "string";
+  }
+  $employer4 = $_POST['employer4']; 
+    if ($employer4 = " " || empty($employer4)) {
+  $employer4 = "Not Fill"; // required
+    echo "string";
+  }
+$occupation4 = $_POST['occupation4']; 
+  if ($occupation4 = " " || empty($occupation4)) {
+  $occupation4 = "Not Fill"; // required
+    echo "string";
+  }
+$n5 = $_POST['5']; 
+  if ($n5 = " " || empty($n5)) {
+  $n5 = "Not Fill"; // required
+    echo "string";
+  }
+   $relationship5 = $_POST['relationship5']; 
+     if ($relationship5 = " " || empty($relationship5)) {
+  $relationship5 = "Not Fill"; // required
+    echo "string";
+  }
+$age5 = $_POST['age5']; 
+  if ($age5 = " " || empty($age5)) {
+  $age5 = "Not Fill"; // required
+    echo "string";
+  }
+  $employer5 = $_POST['employer5']; 
+    if ($employer5 = " " || empty($employer5)) {
+  $employer5 = "Not Fill"; // required
+    echo "string";
+  }
+$occupation5 = $_POST['occupation5']; 
+  if ($occupation5 = " " || empty($occupation5)) {
+  $occupation5 = "Not Fill"; // required
+    echo "string";
+  }
+$n6 = $_POST['6']; 
+  if ($n6 = " " || empty($n6)) {
+  $n6 = "Not Fill"; // required
+    echo "string";
+  }
+   $relationship6 = $_POST['relationship6']; 
+     if ($relationship6 = " " || empty($relationship6)) {
+  $relationship6 = "Not Fill"; // required
+    echo "string";
+  }
+$age6 = $_POST['age6']; 
+  if ($age6 = " " || empty($age6)) {
+  $age6 = "Not Fill"; // required
+    echo "string";
+  }
+  $employer6 = $_POST['employer6']; 
+    if ($employer6 = " " || empty($employer6)) {
+  $employer6 = "Not Fill"; // required
+    echo "string";
+  }
+$occupation6 = $_POST['occupation6']; 
+  if ($occupation6 = " " || empty($occupation6)) {
+  $occupation6 = "Not Fill"; // required
+    echo "string";
+  }
+$n7 = $_POST['7']; 
+  if ($n7 = " " || empty($n7)) {
+  $n7 = "Not Fill"; // required
+    echo "string";
+  }
+   $relationship7 = $_POST['relationship7']; 
+     if ($relationship7 = " " || empty($relationship7)) {
+  $relationship7 = "Not Fill"; // required
+    echo "string";
+  }
+$age7 = $_POST['age7']; 
+  if ($age7 = " " || empty($age7)) {
+  $age7 = "Not Fill"; // required
+    echo "string";
+  }
+  $employer7 = $_POST['employer7']; 
+    if ($employer7 = " " || empty($employer7)) {
+  $employer7 = "Not Fill"; // required
+    echo "string";
+  }
+$occupation7 = $_POST['occupation7']; 
+  if ($occupation7 = " " || empty($occupation7)) {
+  $occupation7 = "Not Fill"; // required
+    echo "string";
+  }
+
+
+    $institution1 = $_POST['institution1']; 
+    if ($institution1 = " " || empty($institution1)) {
+  $institution1 = "Not Fill"; // required
+    echo "string";
+  }
+$date_from_1 = $_POST['date_from_1']; 
+  if ($date_from_1 = " " || empty($date_from_1)) {
+  $date_from_1 = "Not Fill"; // required
+    echo "string";
+  }
+$date_to_1 = $_POST['date_to_1']; 
+  if ($date_to_1 = " " || empty($date_to_1)) {
+  $date_to_1 = "Not Fill"; // required
+    echo "string";
+  }
+   $duration1 = $_POST['duration1']; 
+     if ($duration1 = " " || empty($duration1)) {
+  $duration1 = "Not Fill"; // required
+    echo "string";
+  }
+$standard1 = $_POST['standard1']; 
+  if ($standard1 = " " || empty($standard1)) {
+  $standard1 = "Not Fill"; // required
+    echo "string";
+  }
+  $institution2 = $_POST['institution2']; 
+    if ($institution2 = " " || empty($institution2)) {
+  $institution2 = "Not Fill"; // required
+    echo "string";
+  }
+$date_from_2 = $_POST['date_from_2']; 
+  if ($date_from_2 = " " || empty($date_from_2)) {
+  $date_from_2 = "Not Fill"; // required
+    echo "string";
+  }
+$date_to_2 = $_POST['date_to_2']; 
+  if ($date_to_2 = " " || empty($date_to_2)) {
+  $date_to_2 = "Not Fill"; // required
+    echo "string";
+  }
+   $duration2 = $_POST['duration2']; 
+     if ($duration2 = " " || empty($duration2)) {
+  $duration2 = "Not Fill"; // required
+    echo "string";
+  }
+$standard2 = $_POST['standard2']; 
+  if ($standard2 = " " || empty($standard2)) {
+  $standard2 = "Not Fill"; // required
+    echo "string";
+  }
+  $institution3 = $_POST['institution3']; 
+    if ($institution3 = " " || empty($institution3)) {
+  $institution3 = "Not Fill"; // required
+    echo "string";
+  }
+$date_from_3 = $_POST['date_from_3']; 
+  if ($date_from_3 = " " || empty($date_from_3)) {
+  $date_from_3 = "Not Fill"; // required
+    echo "string";
+  }
+$date_to_3 = $_POST['date_to_3']; 
+  if ($date_to_3 = " " || empty($date_to_3)) {
+  $date_to_3 = "Not Fill"; // required
+    echo "string";
+  }
+   $duration3 = $_POST['duration3']; 
+     if ($duration3 = " " || empty($duration3)) {
+  $duration3 = "Not Fill"; // required
+    echo "string";
+  }
+$standard3 = $_POST['standard3']; 
+  if ($standard3 = " " || empty($standard3)) {
+  $standard3 = "Not Fill"; // required
+    echo "string";
+  }
+  $institution4 = $_POST['institution4']; 
+    if ($institution4 = " " || empty($institution4)) {
+  $institution4 = "Not Fill"; // required
+    echo "string";
+  }
+$date_from_4 = $_POST['date_from_4']; 
+  if ($date_from_4 = " " || empty($date_from_4)) {
+  $date_from_4 = "Not Fill"; // required
+    echo "string";
+  }
+$date_to_4 = $_POST['date_to_4']; 
+  if ($date_to_4 = " " || empty($date_to_4)) {
+  $date_to_4 = "Not Fill"; // required
+    echo "string";
+  }
+   $duration4 = $_POST['duration4']; 
+     if ($duration4 = " " || empty($duration4)) {
+  $duration4 = "Not Fill"; // required
+    echo "string";
+  }
+$standard4 = $_POST['standard4']; 
+  if ($standard4 = " " || empty($standard4)) {
+  $standard4 = "Not Fill"; // required
+    echo "string";
+  }
+  $institution5 = $_POST['institution5']; 
+    if ($institution5 = " " || empty($institution5)) {
+  $institution5 = "Not Fill"; // required
+    echo "string";
+  }
+$date_from_5 = $_POST['date_from_5']; 
+  if ($date_from_5 = " " || empty($date_from_5)) {
+  $date_from_5 = "Not Fill"; // required
+    echo "string";
+  }
+
+
+
+  $date_to_5 = $_POST['date_to_5']; 
+  if ($date_to_5 = " " || empty($date_to_5)) {
+  $date_to_5 = "Not Fill"; // required
+    echo "string";
+  }
+  $duration5 = $_POST['duration5']; 
+    if ($duration5 = " " || empty($duration5)) {
+  $duration5 = "Not Fill"; // required
+    echo "string";
+  }
+$standard5 = $_POST['standard5']; 
+  if ($standard5 = " " || empty($standard5)) {
+  $standard5 = "Not Fill"; // required
+    echo "string";
+  }
+$institution6 = $_POST['institution6']; 
+  if ($institution6 = " " || empty($institution6)) {
+  $institution6 = "Not Fill"; // required
+    echo "string";
+  }
+   $date_from_6 = $_POST['date_from_6']; 
+     if ($date_from_6 = " " || empty($date_from_6)) {
+  $date_from_6 = "Not Fill"; // required
+    echo "string";
+  }
+$date_to_6 = $_POST['date_to_6']; 
+  if ($date_to_6 = " " || empty($date_to_6)) {
+  $date_to_6 = "Not Fill"; // required
+    echo "string";
+  }
+  $duration6 = $_POST['duration6']; 
+    if ($duration6 = " " || empty($duration6)) {
+  $duration6 = "Not Fill"; // required
+    echo "string";
+  }
+$standard6 = $_POST['standard6']; 
+  if ($standard6 = " " || empty($standard6)) {
+  $standard6 = "Not Fill"; // required
+    echo "string";
+  }
+$institution7 = $_POST['institution7']; 
+  if ($institution7 = " " || empty($institution7)) {
+  $institution7 = "Not Fill"; // required
+    echo "string";
+  }
+   $date_from_7 = $_POST['date_from_7']; 
+     if ($date_from_7 = " " || empty($date_from_7)) {
+  $date_from_7 = "Not Fill"; // required
+    echo "string";
+  }
+$date_to_7 = $_POST['date_to_7']; 
+  if ($date_to_7 = " " || empty($date_to_7)) {
+  $date_to_7 = "Not Fill"; // required
+    echo "string";
+  }
+  $duration7 = $_POST['duration7']; 
+    if ($duration7 = " " || empty($duration7)) {
+  $duration7 = "Not Fill"; // required
+    echo "string";
+  }
+$standard7 = $_POST['standard7']; 
+  if ($standard7 = " " || empty($standard7)) {
+  $standard7 = "Not Fill"; // required
+    echo "string";
+  }
+
+
+
+  $institution8 = $_POST['institution8']; 
+  if ($institution8 = " " || empty($institution8)) {
+  $institution8 = "Not Fill"; // required
+    echo "string";
+  }
+  $date_from_8 = $_POST['date_from_8']; 
+    if ($date_from_8 = " " || empty($date_from_8)) {
+  $date_from_8 = "Not Fill"; // required
+    echo "string";
+  }
+$date_to_8 = $_POST['date_to_8']; 
+  if ($date_to_8 = " " || empty($date_to_8)) {
+  $date_to_8 = "Not Fill"; // required
+    echo "string";
+  }
+$duration8 = $_POST['duration8']; 
+  if ($duration8 = " " || empty($duration8)) {
+  $duration8 = "Not Fill"; // required
+    echo "string";
+  }
+   $standard8 = $_POST['standard8']; 
+     if ($standard8 = " " || empty($standard8)) {
+  $standard8 = "Not Fill"; // required
+    echo "string";
+  }
+$institution9 = $_POST['institution9']; 
+  if ($institution9 = " " || empty($institution9)) {
+  $institution9 = "Not Fill"; // required
+    echo "string";
+  }
+  $date_from_9 = $_POST['date_from_9']; 
+    if ($date_from_9 = " " || empty($date_from_9)) {
+  $date_from_9 = "Not Fill"; // required
+    echo "string";
+  }
+$date_to_9 = $_POST['date_to_9']; 
+  if ($date_to_9 = " " || empty($date_to_9)) {
+  $date_to_9 = "Not Fill"; // required
+    echo "string";
+  }
+$duration9 = $_POST['duration9']; 
+  if ($duration9 = " " || empty($duration9)) {
+  $duration9 = "Not Fill"; // required
+    echo "string";
+  }
+   $standard9 = $_POST['standard9']; 
+     if ($standard9 = " " || empty($standard9)) {
+  $standard9 = "Not Fill"; // required
+    echo "string";
+  }
+$language1 = $_POST['language1']; 
+  if ($language1 = " " || empty($language1)) {
+  $language1 = "Not Fill"; // required
+    echo "string";
+  }
+  $speak1 = $_POST['speak1']; 
+    if ($speak1 = " " || empty($speak1)) {
+  $speak1 = "Not Fill"; // required
+    echo "string";
+  }
+$read1 = $_POST['read1']; 
+  if ($read1 = " " || empty($read1)) {
+  $read1 = "Not Fill"; // required
+    echo "string";
+  }
+
+
+
+  $write1 = $_POST['write1']; 
+  if ($write1 = " " || empty($write1)) {
+  $write1 = "Not Fill"; // required
+    echo "string";
+  }
+  $language2 = $_POST['language2']; 
+    if ($language2 = " " || empty($language2)) {
+  $language2 = "Not Fill"; // required
+    echo "string";
+  }
+$speak2 = $_POST['speak2']; 
+  if ($speak2 = " " || empty($speak2)) {
+  $speak2 = "Not Fill"; // required
+    echo "string";
+  }
+$read2 = $_POST['read2']; 
+  if ($read2 = " " || empty($read2)) {
+  $read2 = "Not Fill"; // required
+    echo "string";
+  }
+   $write2 = $_POST['write2']; 
+     if ($write2 = " " || empty($write2)) {
+  $write2 = "Not Fill"; // required
+    echo "string";
+  }
+$language3 = $_POST['language3']; 
+  if ($language3 = " " || empty($language3)) {
+  $language3 = "Not Fill"; // required
+    echo "string";
+  }
+  $speak3 = $_POST['speak3']; 
+    if ($speak3 = " " || empty($speak3)) {
+  $speak3 = "Not Fill"; // required
+    echo "string";
+  }
+$read3 = $_POST['read3']; 
+  if ($read3 = " " || empty($read3)) {
+  $read3 = "Not Fill"; // required
+    echo "string";
+  }
+$write3 = $_POST['write3']; 
+  if ($write3 = " " || empty($write3)) {
+  $write3 = "Not Fill"; // required
+    echo "string";
+  }
+   $language4 = $_POST['language4']; 
+     if ($language4 = " " || empty($language4)) {
+  $language4 = "Not Fill"; // required
+    echo "string";
+  }
+$speak4 = $_POST['speak4']; 
+  if ($speak4 = " " || empty($speak4)) {
+  $speak4 = "Not Fill"; // required
+    echo "string";
+  }
+  $read4 = $_POST['read4']; 
+    if ($read4 = " " || empty($read4)) {
+  $read4 = "Not Fill"; // required
+    echo "string";
+  }
+$write4 = $_POST['write4']; 
+  if ($write4 = " " || empty($write4)) {
+  $write4 = "Not Fill"; // required
+    echo "string";
+  }
+
+
+
+
+
+   $company1 = $_POST['company1']; 
+     if ($company1 = " " || empty($company1)) {
+  $company1 = "Not Fill"; // required
+    echo "string";
+  }
+$position1 = $_POST['position1']; 
+  if ($position1 = " " || empty($position1)) {
+  $position1 = "Not Fill"; // required
+    echo "string";
+  }
+  $date_f1 = $_POST['date_f1']; 
+    if ($date_f1 = " " || empty($date_f1)) {
+  $date_f1 = "Not Fill"; // required
+    echo "string";
+  }
+$date_t1 = $_POST['date_t1']; 
+  if ($date_t1 = " " || empty($date_t1)) {
+  $date_t1 = "Not Fill"; // required
+    echo "string";
+  }
+
+
+
+  $salary1 = $_POST['salary1']; 
+  if ($salary1 = " " || empty($salary1)) {
+  $salary1 = "Not Fill"; // required
+    echo "string";
+  }
+  $leaving1 = $_POST['leaving1']; 
+    if ($leaving1 = " " || empty($leaving1)) {
+  $leaving1 = "Not Fill"; // required
+    echo "string";
+  }
+$company2 = $_POST['company2']; 
+  if ($company2 = " " || empty($company2)) {
+  $company2 = "Not Fill"; // required
+    echo "string";
+  }
+$position2 = $_POST['position2']; 
+  if ($position2 = " " || empty($position2)) {
+  $position2 = "Not Fill"; // required
+    echo "string";
+  }
+   $date_f2 = $_POST['date_f2']; 
+     if ($date_f2 = " " || empty($date_f2)) {
+  $date_f2 = "Not Fill"; // required
+    echo "string";
+  }
+$date_t2 = $_POST['date_t2']; 
+  if ($date_t2 = " " || empty($date_t2)) {
+  $date_t2 = "Not Fill"; // required
+    echo "string";
+  }
+  $salary2 = $_POST['salary2']; 
+    if ($salary2 = " " || empty($salary2)) {
+  $salary2 = "Not Fill"; // required
+    echo "string";
+  }
+$leaving2 = $_POST['leaving2']; 
+  if ($leaving2 = " " || empty($leaving2)) {
+  $leaving2 = "Not Fill"; // required
+    echo "string";
+  }
+$company3 = $_POST['company3']; 
+  if ($company3 = " " || empty($company3)) {
+  $company3 = "Not Fill"; // required
+    echo "string";
+  }
+   $position3 = $_POST['position3']; 
+     if ($position3 = " " || empty($position3)) {
+  $position3 = "Not Fill"; // required
+    echo "string";
+  }
+$date_f3 = $_POST['date_f3']; 
+  if ($date_f3 = " " || empty($date_f3)) {
+  $date_f3 = "Not Fill"; // required
+    echo "string";
+  }
+  $date_t3 = $_POST['date_t3']; 
+    if ($date_t3 = " " || empty($date_t3)) {
+  $date_t3 = "Not Fill"; // required
+    echo "string";
+  }
+$salary3 = $_POST['salary3']; 
+  if ($salary3 = " " || empty($salary3)) {
+  $salary3 = "Not Fill"; // required
+    echo "string";
+  }
+
+
+
+  $leaving3 = $_POST['leaving3']; 
+  if ($leaving3 = " " || empty($leaving3)) {
+  $leaving3 = "Not Fill"; // required
+    echo "string";
+  }
+  $company4 = $_POST['company4']; 
+    if ($company4 = " " || empty($company4)) {
+  $company4 = "Not Fill"; // required
+    echo "string";
+  }
+$position4 = $_POST['position4']; 
+  if ($position4 = " " || empty($position4)) {
+  $position4 = "Not Fill"; // required
+    echo "string";
+  }
+$date_f4 = $_POST['date_f4']; 
+  if ($date_f4 = " " || empty($date_f4)) {
+  $date_f4 = "Not Fill"; // required
+    echo "string";
+  }
+   $date_t4 = $_POST['date_t4']; 
+     if ($date_t4 = " " || empty($date_t4)) {
+  $date_t4 = "Not Fill"; // required
+    echo "string";
+  }
+$salary4 = $_POST['salary4']; 
+  if ($salary4 = " " || empty($salary4)) {
+  $salary4 = "Not Fill"; // required
+    echo "string";
+  }
+  $leaving4 = $_POST['leaving4']; 
+    if ($leaving4 = " " || empty($leaving4)) {
+  $leaving4 = "Not Fill"; // required
+    echo "string";
+  }
+$company5 = $_POST['company5']; 
+  if ($company5 = " " || empty($company5)) {
+  $company5 = "Not Fill"; // required
+    echo "string";
+  }
+$position5 = $_POST['position5']; 
+  if ($position5 = " " || empty($position5)) {
+  $position5 = "Not Fill"; // required
+    echo "string";
+  }
+   $date_f5 = $_POST['date_f5']; 
+     if ($date_f5 = " " || empty($date_f5)) {
+  $date_f5 = "Not Fill"; // required
+    echo "string";
+  }
+$date_t5 = $_POST['date_t5']; 
+  if ($date_t5 = " " || empty($date_t5)) {
+  $date_t5 = "Not Fill"; // required
+    echo "string";
+  }
+  $salary5 = $_POST['salary5']; 
+    if ($salary5 = " " || empty($salary5)) {
+  $salary5 = "Not Fill"; // required
+    echo "string";
+  }
+$leaving5 = $_POST['leaving5']; 
+  if ($leaving5 = " " || empty($leaving5)) {
+  $leaving5 = "Not Fill"; // required
+    echo "string";
+  }
+
+
+  
+  $company6 = $_POST['company6']; 
+  if ($company6 = " " || empty($company6)) {
+  $company6 = "Not Fill"; // required
+    echo "string";
+  }
+  $position6 = $_POST['position6']; 
+    if ($position6 = " " || empty($position6)) {
+  $position6 = "Not Fill"; // required
+    echo "string";
+  }
+$date_f6 = $_POST['date_f6']; 
+  if ($date_f6 = " " || empty($date_f6)) {
+  $date_f6 = "Not Fill"; // required
+    echo "string";
+  }
+$date_t6 = $_POST['date_t6']; 
+  if ($date_t6 = " " || empty($date_t6)) {
+  $date_t6 = "Not Fill"; // required
+    echo "string";
+  }
+   $salary6 = $_POST['salary6']; 
+     if ($salary6 = " " || empty($salary6)) {
+  $salary6 = "Not Fill"; // required
+    echo "string";
+  }
+$leaving6 = $_POST['leaving6']; 
+  if ($leaving6 = " " || empty($leaving6)) {
+  $leaving6 = "Not Fill"; // required
+    echo "string";
+  }
+  $company7 = $_POST['company7']; 
+    if ($company7 = " " || empty($company7)) {
+  $company7 = "Not Fill"; // required
+    echo "string";
+  }
+$position7 = $_POST['position7']; 
+  if ($position7 = " " || empty($position7)) {
+  $position7 = "Not Fill"; // required
+    echo "string";
+  }
+$date_f7 = $_POST['date_f7']; 
+  if ($date_f7 = " " || empty($date_f7)) {
+  $date_f7 = "Not Fill"; // required
+    echo "string";
+  }
+   $date_t7 = $_POST['date_t7']; 
+     if ($date_t7 = " " || empty($date_t7)) {
+  $date_t7 = "Not Fill"; // required
+    echo "string";
+  }
+$salary7 = $_POST['salary7']; 
+  if ($salary7 = " " || empty($salary7)) {
+  $salary7 = "Not Fill"; // required
+    echo "string";
+  }
+  $leaving7 = $_POST['leaving7']; 
+    if ($leaving7 = " " || empty($leaving7)) {
+  $leaving7 = "Not Fill"; // required
+    echo "string";
+  }
+$res_name1 = $_POST['res_name1']; 
+  if ($res_name1 = " " || empty($res_name1)) {
+  $res_name1 = "Not Fill"; // required
+    echo "string";
+  }
+
+
+  ///
+    $address1 = $_POST['address1']; 
+  if ($address1 = " " || empty($address1)) {
+  $address1 = "Not Fill"; // required
+    echo "string";
+  }
+  $telno1 = $_POST['telno1']; 
+    if ($telno1 = " " || empty($telno1)) {
+  $telno1 = "Not Fill"; // required
+    echo "string";
+  }
+$occupation1 = $_POST['occupation1']; 
+  if ($occupation1 = " " || empty($occupation1)) {
+  $occupation1 = "Not Fill"; // required
+    echo "string";
+  }
+$since1 = $_POST['since1']; 
+  if ($since1 = " " || empty($since1)) {
+  $since1 = "Not Fill"; // required
+    echo "string";
+  }
+   $res_name2 = $_POST['res_name2']; 
+     if ($res_name2 = " " || empty($res_name2)) {
+  $res_name2 = "Not Fill"; // required
+    echo "string";
+  }
+$address2 = $_POST['address2']; 
+  if ($address2 = " " || empty($address2)) {
+  $address2 = "Not Fill"; // required
+    echo "string";
+  }
+  $telno2 = $_POST['telno2']; 
+    if ($telno2 = " " || empty($telno2)) {
+  $telno2 = "Not Fill"; // required
+    echo "string";
+  }
+$occupation2 = $_POST['occupation2']; 
+  if ($occupation2 = " " || empty($occupation2)) {
+  $occupation2 = "Not Fill"; // required
+    echo "string";
+  }
+$since2 = $_POST['since2']; 
+  if ($since2 = " " || empty($since2)) {
+  $since2 = "Not Fill"; // required
+    echo "string";
+  }
+   $res_name3 = $_POST['res_name3']; 
+     if ($res_name3 = " " || empty($res_name3)) {
+  $res_name3 = "Not Fill"; // required
+    echo "string";
+  }
+$address3 = $_POST['address3']; 
+  if ($address3 = " " || empty($address3)) {
+  $address3 = "Not Fill"; // required
+    echo "string";
+  }
+  $telno3 = $_POST['telno3']; 
+    if ($telno3 = " " || empty($telno3)) {
+  $telno3 = "Not Fill"; // required
+    echo "string";
+  }
+$occupation3 = $_POST['occupation3']; 
+  if ($occupation3 = " " || empty($occupation3)) {
+  $occupation3 = "Not Fill"; // required
+    echo "string";
+  }
+
+
+  
+  $since3 = $_POST['since3']; 
+  if ($since3 = " " || empty($since3)) {
+  $since3 = "Not Fill"; // required
+    echo "string";
+  }
+  $y_specify = $_POST['y_specify']; 
+    if ($y_specify = " " || empty($y_specify)) {
+  $y_specify = "Not Fill"; // required
+    echo "string";
+  }
+$n_specify = $_POST['n_specify']; 
+  if ($n_specify = " " || empty($n_specify)) {
+  $n_specify = "Not Fill"; // required
+    echo "string";
+  }
+$expected = $_POST['expected']; 
+  if ($expected = " " || empty($expected)) {
+  $expected = "Not Fill"; // required
+    echo "string";
+  }
+   $available = $_POST['available']; 
+     if ($available = " " || empty($available)) {
+  $available = "Not Fill"; // required
+    echo "string";
+  }
+$signature = $_POST['signature']; 
+  if ($signature = " " || empty($signature)) {
+  $signature = "Not Fill"; // required
+    echo "string";
+  }
+  $apply_date = $_POST['apply_date']; 
+    if ($apply_date = " " || empty($apply_date)) {
+  $apply_date = "Not Fill"; // required
+    echo "string";
+  }
+
+
+
+$dompdf->loadHtml(' <h2 class="app_title">Employment Application<span class="download">
+                <a href="http://localhost/winaumashipping/download.php?download_file=application.pdf">Download Here</a>
+            </span></h2>
+
+
+            <table style="width:450px;float:left;margin-top:35px;">
+             <tr><td>
+        
+        <b>Position Applied :</b>'
+        .$position.'
+    </td>
+    
+        </tr>
+
+        <tr>
+            <td style="padding-top:40px;">
+        <b>Date Applied &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b>
+       '. $date.'
+        </td>
+         
+        </tr>
+
+            </table>
+            <div class="col-md-55 alignimage">
+                        <div class="thumbnail" id="fileList">
+                          <div class="view view-first">
+
+
+                            <?php echo "<img  class=\"resize_img\" style=\"width: 100%; height:100%;display: block;\" src=\"images/user.png \" alt=\"image\" />"; ?>
+                            <input type="hidden" name="himgpath" value="images/user.png">
+
+                          </div>
+                        </div>
+                        <input type="file" id="fileElem" name="browseimg" class="dz-default dz-message" value="Update Image" size="30" onchange="handleFiles(this.files)">
+
+                        </div>
+            <h4 class="ask_title">How you come to know of this position open?</h4>
+        <input type="checkbox" name="ask" value="newspaper" checked> Through Newspaper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Please Specify :</label>&nbsp;&nbsp;&nbsp;'.$specify1.'<br>
+          <input type="checkbox" name="ask" value="employment" > Through Employment Agency&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Please Specify :</label>&nbsp;&nbsp;&nbsp;'.$specify2.'<br>
+          <input type="checkbox" name="ask" value="friend" > Friend Recommend&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Please Specify :</label>&nbsp;&nbsp;&nbsp;&nbsp;'.$specify3.'<br>
+          <input type="checkbox" name="ask" value="internet" > Others(Internet Job Search,etc)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Please Specify :</label>&nbsp;&nbsp;&nbsp;&nbsp;'.$specify4.'<br>
+         
+
+
+<hr />
+
+        <input id="skip_WhereToSend" name="skip_WhereToSend" type="hidden" value="your@email.com" />
+        <input id="skip_SnapHostID" name="skip_SnapHostID" type="hidden" value="EWT89XDFH47U" />
+        <input id="skip_WhereToReturn" name="skip_WhereToReturn" type="hidden" value="http://www.YourWebsiteAddress.com/ThankYouPage.htm" />
+        <input id="skip_Subject" name="skip_Subject" type="hidden" value="Employment Application" />
+        <input id="skip_ShowUsersIp" name="skip_ShowUsersIp" type="hidden" value="1" />
+        <input id="skip_SendCopyToUser" name="skip_SendCopyToUser" type="hidden" value="1" />
+        <h2 class="detail_title">(A)PERSONAL DETAILS</h2>
+       <table cellpadding="5" cellspacing="0" style="border: 1px solid gray;">
+        <tr>
+        <td colspan="2">
+        <label>Full Name (as in NRC;) 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       '.$full_name.'
+        </td>
+        
+        </tr>
+        <tr>
+        <td>
+        <b>NRC No.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+       '.$nrc.'
+        </td>
+         <td>
+        <b>Passport No.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b>
+        '.$passport.'
+        </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+        <label>Present Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        '.$present_add.'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input name="First_Name" type="text" value=" " class="app_form_textbox" maxlength="50" style="width:835px" />
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <b>Telephone No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+        &nbsp;&nbsp;&nbsp;&nbsp;'.$tel.'
+        </td>
+         <td>
+        <b>Postal Code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b>
+        '.$postal.'
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+        <b>E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+        &nbsp;&nbsp;&nbsp;&nbsp;'.$email.'
+        </td>
+         <td>
+        <b>Sex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b>
+        <input type="checkbox" name="sex" value="male" > Male
+         <input type="checkbox" name="sex" value="female" > Female
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+        <b>Date of Birth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+        &nbsp;&nbsp;&nbsp;&nbsp;'.$birth.'
+        </td>
+         <td>
+        <b>Marital&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b>
+         <input type="checkbox" name="marital" value="single" > Single&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="checkbox" name="marital" value="divorced" > Divorced&nbsp;&nbsp;&nbsp;&nbsp;
+         <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="checkbox" name="marital" value="married" > Married&nbsp;&nbsp;
+         <input type="checkbox" name="marital" value="window" > Widow
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+        <b>Place of Birth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+        &nbsp;&nbsp;&nbsp;&nbsp;'.$pBirth.'
+        </td>
+         <td>
+        <b>Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b>
+        '.$age.'
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+        <b>Nationality&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+        &nbsp;&nbsp;&nbsp;&nbsp;'.$nationality.'
+        </td>
+         <td>
+        <b>Religion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b>
+        '.$religion.'
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+        <b>Race&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+        &nbsp;&nbsp;&nbsp;&nbsp;'.$race.'
+        </td>
+        <td>
+        <b>Blood Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b>
+         <input type="checkbox" name="blood" value="a" > A&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="checkbox" name="blood" value="o" > O&nbsp;&nbsp;&nbsp;&nbsp;
+         <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;<input type="checkbox" name="blood" value="b" > B&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="checkbox" name="blood" value="ab" > AB
+        </td>
+        </tr>
+         <tr>
+        <td>
+        <b>Valid Driving License&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="license" value="yes" > YES&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="checkbox" name="license" value="no" > NO&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td>
+        <b>If yes,please specify what class:</b>
+         '.$spe_class.'
+        </td>
+        </tr>
+        </table>
+        <hr />
+        <h2 class="detail_title">(B)FAMILY BACKGROUND</h2>
+        <table class="b_table" style="width:100%">
+            <tr class="b_table">
+                <th class="b_table b_table_th">Name</th>
+                <th class="b_table b_table_th">Relationship</th>
+                <th class="b_table b_table_th">Age</th>
+                <th class="b_table b_table_th">Employer</th>
+                <th class="b_table b_table_th">Occupation</th>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">Father:'.$father.'</td>
+                <td class="b_table">'.$relationship.'</td>
+                <td class="b_table">'.$age.'</td>
+                <td class="b_table">'.$employer.'</td>
+                <td class="b_table">'.$occupation.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">Mother:'.$mother.'</td>
+                <td class="b_table">'.$relationship2.'</td>
+                <td class="b_table">'.$age2.'</td>
+                <td class="b_table">'.$employer2.'</td>
+                <td class="b_table">'.$occupation2.'</td>       
+            </tr>
+            <tr class="b_table">
+                <td class="b_table"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$n3.'</td>
+               <td class="b_table">'.$relationship3.'</td>
+                <td class="b_table">'.$age3.'</td>
+                <td class="b_table">'.$employer3.'</td>
+                <td class="b_table">'.$occupation3.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$n4.'</td>
+                <td class="b_table">'.$relationship4.'</td>
+                <td class="b_table">'.$age4.'</td>
+                <td class="b_table">'.$employer4.'</td>
+                <td class="b_table">'.$occupation4.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$n5.'</td>
+                <td class="b_table">'.$relationship5.'</td>
+                <td class="b_table">'.$age5.'</td>
+                <td class="b_table">'.$employer5.'</td>
+                <td class="b_table">'.$occupation5.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$n6.'</td>
+               <td class="b_table">'.$relationship6.'</td>
+                <td class="b_table">'.$age6.'</td>
+                <td class="b_table">'.$employer6.'</td>
+                <td class="b_table">'.$occupation6.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$n7.'</td>
+                <td class="b_table">'.$relationship7.'</td>
+                <td class="b_table">'.$age7.'</td>
+                <td class="b_table">'.$employer7.'</td>
+                <td class="b_table">'.$occupation7.'</td>
+            </tr>
+        </table>
+          <hr />
+        <h2 class="detail_title">(C)EDUCATIONAL BACKGROUND<span style="font-size:large;padding-left:10px">(from elementary school)</span></h2>
+        <table class="b_table" style="width:100%">
+            <tr>
+
+                
+            </tr>
+            <tr>
+                <th  rowspan="2" class="b_table b_table_th">Name of Insitution</th>
+                <th class="b_table b_table_th" colspan="2" >Date</th>
+                <th class="b_table b_table_th" rowspan="2">Duration</th>                
+                <th class="b_table b_table_th" rowspan="2">Standard/Certificate<h4> Attained</h4></th>
+            </tr>
+             <tr class="b_table">
+              <td class="b_table"><h3 style="text-align:center;padding:0;margin:0">From</h3><h6 style="text-align:center;padding:0;margin:0">Month/Year</h6></td>
+                <td class="b_table"><h3 style="text-align:center;padding:0;margin:0">To</h3><h6 style="text-align:center;padding:0;margin:0">Month/Year</h6></td>  
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$institution1.'</td>
+                <td class="b_table">'.$date_from_1.'</td>
+                <td class="b_table">'.$date_to_1.'</td>
+                <td class="b_table">'.$duration1.'</td>
+                <td class="b_table">'.$standard1.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$institution2.'</td>
+                <td class="b_table">'.$date_from_2.'</td>
+                <td class="b_table">'.$date_to_2.'</td>
+                <td class="b_table">'.$duration2.'</td>
+                <td class="b_table">'.$standard2.'</td>
+            </tr>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$institution3.'</td>
+               <td class="b_table">'.$date_from_3.'</td>
+                <td class="b_table">'.$date_to_3.'</td>
+                <td class="b_table">'.$duration3.'</td>
+                <td class="b_table">'.$standard3.'</td>
+            </tr>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$institution4.'</td>
+               <td class="b_table">'.$date_from_4.'</td>
+                <td class="b_table">'.$date_to_4.'</td>
+                <td class="b_table">'.$duration4.'</td>
+                <td class="b_table">'.$standard4.'</td>
+            </tr>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$institution5.'</td>
+               <td class="b_table">'.$date_from_5.'</td>
+                <td class="b_table">'.$date_to_5.'</td>
+                <td class="b_table">'.$duration5.'</td>
+                <td class="b_table">'.$standard5.'</td>
+            </tr>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$institution6.'</td>
+               <td class="b_table">'.$date_from_6.'</td>
+                <td class="b_table">'.$date_to_6.'</td>
+                <td class="b_table">'.$duration6.'</td>
+                <td class="b_table">'.$standard6.'</td>
+            </tr>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$institution7.'</td>
+               <td class="b_table">'.$date_from_7.'</td>
+                <td class="b_table">'.$date_to_7.'</td>
+                <td class="b_table">'.$duration7.'</td>
+                <td class="b_table">'.$duration7.'</td>
+            </tr>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$institution8.'</td>
+               <td class="b_table">'.$date_from_8.'</td>
+                <td class="b_table">'.$date_to_8.'</td>
+                <td class="b_table">'.$duration8.'</td>
+                <td class="b_table">'.$standard8.'</td>
+            </tr>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$institution9.'</td>
+               <td class="b_table">'.$date_from_9.'</td>
+                <td class="b_table">'.$date_to_9.'</td>
+                <td class="b_table">'.$duration9.'</td>
+                <td class="b_table">'.$standard9.'</td>
+            </tr>
+            </tr>
+        </table>
+        <hr/>
+       <h2 class="detail_title">(D)LANGUAGES<span style="font-size:large;padding-left:10px">(Please indicate Slight/Fair/Fluent)</span></h2>
+        <table class="b_table" style="width:100%">
+            <tr class="b_table">
+                <th class="b_table b_table_th">&nbsp;</th>
+                <th class="b_table b_table_th">Speak</th>
+                <th class="b_table b_table_th">Read</th>
+                <th class="b_table b_table_th">Write</th>
+                
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">'.$language1.'</td>
+                <td class="b_table">'.$speak1.'</td>
+                <td class="b_table">'.$read1.'</td>
+                <td class="b_table">'.$write1.'</td>
+               
+            </tr>
+              <tr class="b_table">
+                <td class="b_table">'.$language2.'&nbsp;</td>
+                <td class="b_table">'.$speak2.'</td>
+                <td class="b_table">'.$read2.'</td>
+                <td class="b_table">'.$write2.'</td>
+               
+            </tr>
+              <tr class="b_table">
+                <td class="b_table">'.$language3.'&nbsp;</td>
+                <td class="b_table">'.$speak3.'</td>
+                <td class="b_table">'.$read3.'</td>
+                <td class="b_table">'.$write3.'</td>
+               
+            </tr>
+              <tr class="b_table">
+                <td class="b_table">'.$language4.'&nbsp;</td>
+                <td class="b_table">'.$speak4.'</td>
+                <td class="b_table">'.$read4.'</td>
+                <td class="b_table">'.$write4.'</td>
+               
+            </tr>
+        </table>
+        <hr/>
+        <h2 class="detail_title">(E)KNOWLEDGE/SKILLS with</h2>
+        <table class="b_table" style="width:100%">
+        
+            <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;" style="padding-left:10px;">
+                    <input type="checkbox" name="cobol" style="padding-left:10px;">&nbsp;&nbsp;COBOL
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="vb" style="padding-left:10px;" >&nbsp;&nbsp;VB</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="java_script" style="padding-left:10px;">&nbsp;&nbsp;Java Script</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="intranet" style="padding-left:10px;">&nbsp;&nbsp;Intranet</td>
+            </tr>
+             <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;">
+                    <input type="checkbox" name="asembly" style="padding-left:10px;">&nbsp;&nbsp;Asembly
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="asp" style="padding-left:10px;">&nbsp;&nbsp;ASP</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="uml" style="padding-left:10px;">&nbsp;&nbsp;UML</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="network" style="padding-left:10px;">&nbsp;&nbsp;Network & Security Management</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;">
+                    <input type="checkbox" name="perl" style="padding-left:10px;">&nbsp;&nbsp;Perl
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="net" style="padding-left:10px;">&nbsp;&nbsp;.Net</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="mssql" style="padding-left:10px;">&nbsp;&nbsp;MS SQL</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="lan" style="padding-left:10px;">&nbsp;&nbsp;LAN & WAN Technology</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;">
+                    <input type="checkbox" name="linux" style="padding-left:10px;">&nbsp;&nbsp;Linux
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="c#" style="padding-left:10px;">&nbsp;&nbsp;C#</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="oracle" style="padding-left:10px;">&nbsp;&nbsp;Oracle 8.0</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="protocol" style="padding-left:10px;">&nbsp;&nbsp;Communication Protocol(SAM,TCP/IP,CAFIS,X25,etc)</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;">
+                    <input type="checkbox" name="unix" style="padding-left:10px;">&nbsp;&nbsp;Unix
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="java" style="padding-left:10px;">&nbsp;&nbsp;Java</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="oracle1" style="padding-left:10px;">&nbsp;&nbsp;Oracle 9i</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="hardware" style="padding-left:10px;">&nbsp;&nbsp;Hardware</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;">
+                    <input type="checkbox" name="corba" style="padding-left:10px;">&nbsp;&nbsp;CORBA
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="servlet" style="padding-left:10px;">&nbsp;&nbsp;Servlet</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="db2" style="padding-left:10px;">&nbsp;&nbsp;DB2</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="dream" style="padding-left:10px;">&nbsp;&nbsp;Dreamweaver</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;">
+                    <input type="checkbox" name="c" style="padding-left:10px;">&nbsp;&nbsp;C
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="javabean" style="padding-left:10px;">&nbsp;&nbsp;JavaBeans</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="websphere" style="padding-left:10px;">&nbsp;&nbsp;WebSphere</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="photoshop" style="padding-left:10px;">&nbsp;&nbsp;Photoshop</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;">
+                    <input type="checkbox" name="cplus" style="padding-left:10px;">&nbsp;&nbsp;C++
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="jsp" style="padding-left:10px;">&nbsp;&nbsp;JSP</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="access" style="padding-left:10px;">&nbsp;&nbsp;Access</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="illustrator" style="padding-left:10px;">&nbsp;&nbsp;Illustrator</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;">
+                    <input type="checkbox" name="vc" style="padding-left:10px;">&nbsp;&nbsp;VC
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="ejb" style="padding-left:10px;">&nbsp;&nbsp;EJB</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="html" style="padding-left:10px;">&nbsp;&nbsp;HTML</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="oa" style="padding-left:10px;">&nbsp;&nbsp;OA Tools(Excel,Word,Power Point)</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;">
+                    <input type="checkbox" name="vcplus" style="padding-left:10px;">&nbsp;&nbsp;VC++
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="jdbc" style="padding-left:10px;">&nbsp;&nbsp;JDBC</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="xml" style="padding-left:10px;">&nbsp;&nbsp;XML</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="adobe" style="padding-left:10px;">&nbsp;&nbsp;Adobe Page Maker</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;">
+                    <input type="checkbox" name="vb_script" style="padding-left:10px;">&nbsp;&nbsp;VB Script
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="j2se" style="padding-left:10px;">&nbsp;&nbsp;J2SE</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="sgml" style="padding-left:10px;">&nbsp;&nbsp;SGML</td>
+                <td class="b_table" style="padding-left:10px;">
+            </tr>
+            <tr class="b_table">
+                <td class="b_table" style="padding-left:10px;">
+                    <input type="checkbox" name="vba" style="padding-left:10px;">&nbsp;&nbsp;VBA
+                </td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="jdk" style="padding-left:10px;">&nbsp;&nbsp;JDK</td>
+                <td class="b_table" style="padding-left:10px;"><input type="checkbox" name="internet" style="padding-left:10px;">&nbsp;&nbsp;Internet</td>
+                <td class="b_table" style="padding-left:10px;">
+            </tr>
+
+        </table>
+
+         <hr/>
+        <h2 class="detail_title">(F)EMPLOYMENT HISTORY<span style="font-size:large;padding-left:10px">(If you have working experience)</span></h2>
+        <table class="b_table" style="width:100%">
+            <tr>
+                
+            </tr>
+            <tr>
+                <th  rowspan="2" class="b_table b_table_th">Name of Company<h4>or Employer</h4> </th>
+                <th  rowspan="2" class="b_table b_table_th">Position Held</th>
+                <th class="b_table b_table_th" colspan="2" >Date</th>
+                <th class="b_table b_table_th" rowspan="2">Salary</th>                
+                <th class="b_table b_table_th" rowspan="2">Reason for<h4> Leaving</h4></th>
+            </tr>
+             <tr class="b_table">
+
+              <td class="b_table"><h3 style="text-align:center;padding:0;margin:0">From</h3><h6 style="text-align:center;padding:0;margin:0">Month/Year</h6></td>
+                <td class="b_table"><h3 style="text-align:center;padding:0;margin:0">To</h3><h6 style="text-align:center;padding:0;margin:0">Month/Year</h6></td>  
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">'.$company1.'</td>
+                <td class="b_table">'.$position1.'</td>
+                <td class="b_table">'.$date_f1.'</td>
+                <td class="b_table">'.$date_t1.'</td>
+                 <td class="b_table">'.$salary1.'</td>
+                <td class="b_table">'.$leaving1.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">'.$company2.'</td>
+                <td class="b_table">'.$position2.'</td>
+                <td class="b_table">'.$date_f2.'</td>
+                <td class="b_table">'.$date_t2.'</td>
+                 <td class="b_table">'.$salary2.'</td>
+                <td class="b_table">'.$leaving2.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">'.$company3.'</td>
+                 <td class="b_table">'.$position3.'</td>
+                <td class="b_table">'.$date_f3.'</td>
+                <td class="b_table">'.$date_t3.'</td>
+                 <td class="b_table">'.$salary3.'</td>
+                <td class="b_table">'.$leaving3.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">'.$company4.'</td>
+                 <td class="b_table">'.$position4.'</td>
+                <td class="b_table">'.$date_f4.'</td>
+                <td class="b_table">'.$date_t4.'</td>
+                 <td class="b_table">'.$salary4.'</td>
+                <td class="b_table">'.$leaving4.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">'.$company5.'</td>
+                 <td class="b_table">'.$position5.'</td>
+                <td class="b_table">'.$date_f5.'</td>
+                <td class="b_table">'.$date_t5.'</td>
+                 <td class="b_table">'.$salary5.'</td>
+                <td class="b_table">'.$leaving5.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">'.$company6.'</td>
+                 <td class="b_table">'.$position6.'</td>
+                <td class="b_table">'.$date_f6.'</td>
+                <td class="b_table">'.$date_t6.'</td>
+                 <td class="b_table">'.$salary6.'</td>
+                <td class="b_table">'.$leaving6.'</td>
+            </tr>
+            <tr class="b_table">
+                <td class="b_table">'.$company7.'</td>
+                 <td class="b_table">'.$position7.'</td>
+                <td class="b_table">'.$date_f7.'</td>
+                <td class="b_table">'.$date_t7.'</td>
+                 <td class="b_table">'.$salary7.'</td>
+                <td class="b_table">'.$leaving7.'</td>
+            </tr>
+            
+        </table>
+         <hr/>
+        <h2 class="detail_title">(G)REFERENCES</h2>
+        <h5>List at least 2 references below.Relatives should not be included.</h5>
+        <table class="b_table" style="width:100%">
+            <tr class="b_table">
+                <th  class="b_table b_table_th">Name</th>
+                <th   class="b_table b_table_th">Address</th>
+                <th   class="b_table b_table_th">Tel No</th>
+                <th  class="b_table b_table_th">Occupation</th>
+                <th  class="b_table b_table_th">Year Known Since</th>
+            </tr>
+            <tr>
+                <td class="b_table">'.$res_name1.'</td>
+                <td class="b_table">'.$address1.'</td>
+                <td class="b_table">'.$telno1.'</td>
+                <td class="b_table">'.$occupation1.'</td>
+                <td class="b_table">'.$since1.'</td>
+            </tr>
+            <tr>
+                <td class="b_table">'.$res_name2.'</td>
+                   <td class="b_table">'.$address2.'</td>
+                <td class="b_table">'.$telno2.'</td>
+                <td class="b_table">'.$occupation2.'</td>
+                <td class="b_table">'.$since2.'</td>
+            </tr>
+            <tr>
+                <td class="b_table">'.$res_name3.'</td>
+                    <td class="b_table">'.$address3.'</td>
+                <td class="b_table">'.$telno3.'</td>
+                <td class="b_table">'.$occupation3.'</td>
+                <td class="b_table">'.$since3.'</td>
+            </tr>
+        </table>
+        <hr/>
+        <h2 class="detail_title">(H)GENERAL</h2>
+        <ol>
+            <li>
+                Have you ever suffered from any major illness? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+        <input type="checkbox" name="illness" value="yes" > Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="checkbox" name="illness" value="no" > No<br>
+                If yes, please specify:<input type="text" value="'.$y_specify.'" class="d_table_textbox" style="width:600px"></input>
+            </li>
+            <li>
+                Have you ever been convicted of any criminal offence? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+        <input type="checkbox" name="crime" value="yes" > Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="checkbox" name="crime" value="no" > No<br>
+                If yes, please specify:<input type="text" value="'.$n_specify.'" class="d_table_textbox" style="width:600px"></input>
+            </li>
+        </ol>
+       Remuneration Expected&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" value="'.$expected.'" name="expected" class="d_table_textbox" style="width:300px"></input>
+        
+        <br><br>Earliest Available Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" value="'.$available.'" name="available" class="d_table_textbox" style="width:300px"></input>
+        <br /><br />
+        <br><br>
+        I hereby declare that the information given by me in this form is correct and true to the best of my knowledge.
+        I understand and accept that if at any time after engagement it is found that a false declaration has been made 
+        in this form, the employer has the absolute right to terminate my employment forthwith.
+        <br>
+        <br>
+        <br>
+        Signature of Applicant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" value="'.$signature.'" name="signature" class="d_table_textbox" style="width:300px"></input>
+        <br><br>
+        Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" value="'.$apply_date.'" class="d_table_textbox" style="width:300px"></input>
+        <br>
+        <br>
+        <br>
+        <input name="skip_Submit" type="submit" style="margin-left:500px" value="Send Application" />
+        </div>');
+
+
+
+// (Optional) Setup the paper size and orientation
+$dompdf->setPaper('A4', 'landscape');
+
+// Render the HTML as PDF
+$dompdf->render();
+
+$canvas =$dompdf->get_canvas();
+    $date = date("d/m/Y");
+  
+    $output = $dompdf->output();
+    $file_to_save = 'ApplicationForm.pdf';
+    file_put_contents($file_to_save, $output);
+
+$name        = "Name goes here";
+$email       = "someome@anadress.com";
+$to          = "myapanyi.az@gmail.com";
+$from        = "John-Smith ";
+$subject     = "Here is your attachment";
+$mainMessage = "Hi, here's the file.";
+$fileatt     = "ApplicationForm.pdf";
+$fileatttype = "application/pdf";
+$fileattname = "ApplicationForm.pdf";
+$headers = "From: mya.pan.yi.mpy@gmail.com";
+// File
+$file = fopen($fileatt, 'rb');
+$data = fread($file, filesize($fileatt));
+fclose($file);
+// This attaches the file
+$semi_rand     = md5(time());
+$mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
+$headers      .= "\nMIME-Version: 1.0\n" .
+"Content-Type: multipart/mixed;\n" .
+" boundary=\"{$mime_boundary}\"";
+$message = "This is a multi-part message in MIME format.\n\n" .
+"-{$mime_boundary}\n" .
+"Content-Type: text/plain; charset=\"iso-8859-1\n" .
+"Content-Transfer-Encoding: 7bit\n\n" .
+$mainMessage  . "\n\n";
+$data = chunk_split(base64_encode($data));
+$message .= "--{$mime_boundary}\n" .
+"Content-Type: {$fileatttype};\n" .
+" name=\"{$fileattname}\"\n" .
+"Content-Disposition: attachment;\n" .
+" filename=\"{$fileattname}\"\n" .
+"Content-Transfer-Encoding: base64\n\n" .
+$data . "\n\n" .
+"-{$mime_boundary}-\n";
+// Send the email
+if(mail($to, $subject, $message, $headers)) {
+    echo "The email was sent.";
+}
+else {
+    echo "There was an error sending the mail.";
+}
+
+?>
